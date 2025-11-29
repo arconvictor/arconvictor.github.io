@@ -4,61 +4,165 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio von Victor Arcon</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio von Victor Arcon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
         <nav>
             <ul class="menu">
-                <li class="active"><span class="dot"></span> Home</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li class="active">
+                    <span class="dot"></span><a href="#menu">Home</a>
+                </li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <p id="titulo">Hallo, ich bin Victor Manuel Arcon Perez</p>
-        <h1 id="especialidad">Fachinformatiker <br>für Anwendungsentwicklung</h1>
-        <section>
-            <h1>Projekte</h1>
-            <ul>
-                <li>
-                    <a href="https://github.com/arconvictor/password-generator">password-generator</a>
-                </li>
-                <li>
-                    <a href="https://github.com/arconvictor/spured">spured</a>
-                </li>
-            </ul>
+        <div class="container text-center">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col p-5">
+                        <p id="titulo">Hi, i am Victor Manuel Arcon Perez<br></p>
+                        <h1 id="especialidad">Computer Science Experte</h1>
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col mt-5 mb-custom">
+                                    <a
+                                        href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES"><img
+                                            alt="Linkedin" src="assets/img/linkedin.svg" width="80" height="80"></a>
+                                </div>
+                                <div class="col mt-5 mb-custom">
+                                    <a href="https://github.com/arconvictor"><img alt="Github"
+                                            src="assets/img/github-brands-solid-full.svg" width="80" height="80"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-5">
+                        <p class="text-white fs-3">Transforming ideas into interactive and seamless digital experiences
+                            with cutting-edge frontend development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex p-2 mb-customs bd-highlight bg-white justify-content-center">
+            I'm a flexbox container!
+        </div>
+
+        <!-- Acordeón -->
+        <section class="accordion" id="accordionWhatIDo">
+            <!-- Item 1: Web Development -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingWeb">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseWeb" aria-expanded="false" aria-controls="collapseWeb">
+                        Web Development
+                    </button>
+                </h2>
+                <div id="collapseWeb" class="accordion-collapse collapse" aria-labelledby="headingWeb"
+                    data-bs-parent="#accordionWhatIDo">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Single Page Applications (SPAs)</li>
+                            <li>Landing pages and business websites</li>
+                            <li>Portfolio websites</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Mobile Development -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMobile">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseMobile" aria-expanded="false" aria-controls="collapseMobile">
+                        Mobile Development
+                    </button>
+                </h2>
+                <div id="collapseMobile" class="accordion-collapse collapse" aria-labelledby="headingMobile"
+                    data-bs-parent="#accordionWhatIDo">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Android native apps</li>
+                            <li>Modular UI design</li>
+                            <li>Rule engine integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: UI/UX Design & Prototyping -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDesign">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseDesign" aria-expanded="false" aria-controls="collapseDesign">
+                        UI/UX Design & Prototyping
+                    </button>
+                </h2>
+                <div id="collapseDesign" class="accordion-collapse collapse" aria-labelledby="headingDesign"
+                    data-bs-parent="#accordionWhatIDo">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Wireframes and mockups</li>
+                            <li>Color psychology and accessibility</li>
+                            <li>Interactive prototypes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h1>Fähigkeiten</h1>
-            <ul>
+        <section class="projects-images">
+            <section class="sectionen">
+                <h4>My work</h4>
+                <h3 id="projects">Projects</h3>
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <a href="https://github.com/arconvictor/password-generator">
+                                <img alt="Entcryption" src="assets/img/lock.jpg" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://github.com/arconvictor/spured">
+                                <img alt="database" src="assets/img/database.jpg" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="sectionen">
+            <h3>Skill</h3>
+            <ul id="style">
                 <li>HTML, CSS, Java, Python</li>
-                <li>Linux & Windows Administration</li>
-                <li>Jira & Confluence Verwaltung</li>
+                <li>Linux, Windows, Jira & Confluence Administration</li>
             </ul>
         </section>
 
-        <section>
-            <h1>Kontakt</h1>
+        <section class="sectionen">
+            <h3 id="contact">Contact</h3>
             <p>Email: it@victor-arcon.de</p>
             <p>Telefonnummer: +4915251070744</p>
-            <p> 
-                <a href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES">LinkedIn</a>
-            </p>
             <p>Standord: Plauen, Sachsen</p>
         </section>
     </main>
 
-    <!-- <img alt="Hintergrundbild" width="1000" height="500" src="prozessor.jpg"> -->
-
     <footer>
         <small>Copyright &#169 2025 Victor Arcon. All right reserved</small>
     </footer>
+
+    <!-- Script de Bootstrap al final -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
