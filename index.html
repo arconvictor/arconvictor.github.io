@@ -14,54 +14,55 @@
     <header>
         <nav>
             <ul class="menu">
-                <li class="active">
-                    <span class="dot"></span><a href="#menu">Home</a>
-                </li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="#home">Home</a><span class="dot"></span></li>
+                <li><a href="#projects">Projects</a><span class="dot"></span></li>
+                <li><a href="#contact">Contact</a><span class="dot"></span></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section id="home">
             <div class="container text-center">
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col p-5">
-                            <p id="titulo">Hi, i am Victor Manuel Arcon Perez<br></p>
-                            <h1 id="especialidad">Computer Science Experte</h1>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col mt-5 mb-custom">
-                                        <a
-                                            href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES"><img
-                                                alt="Linkedin" src="assets/img/linkedin.svg" width="80" height="80"></a>
-                                    </div>
-                                    <div class="col mt-5 mb-custom">
-                                        <a href="https://github.com/arconvictor"><img alt="Github"
-                                                src="assets/img/github-brands-solid-full.svg" width="80" height="80"></a>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-3">Hi, i'm Victor Arcon <br></p>
+                        <h1 class="fs-3">Computer Science Expert</h1>
+                        <div class="row">
+                            <div class="col mt-5  mb-custom padding-custom-icons-in">
+                                <a href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES"><img
+                                        alt="Linkedin" src="assets/img/linkedin.svg" width="80" height="80"></a>
+                            </div>
+                            <div class="col mt-5 mb-custom padding-custom-icons-git">
+                                <a href="https://github.com/arconvictor"><img alt="Github"
+                                        src="assets/img/github-brands-solid-full.svg" width="80" height="80"></a>
                             </div>
                         </div>
-                        <div class="col p-5">
-                            <p class="text-white fs-3">Transforming ideas into interactive and seamless digital experiences
-                                with cutting-edge frontend development.</p>
-                        </div>
+                    </div>
+                    <div class="col">
+                        <p class="fs-3">Transforming ideas into interactive and seamless digital
+                            experiences
+                            with cutting-edge frontend development.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="d-flex p-5 mt-custom-1 mt-custom-1 bd-highlight bg-custom-1 text-white justify-content-center">
+        <div class="d-flex p-4 mtb-custom-1 bd-highlight bg-custom-1 justify-content-center">
             <h2>I'm a flexbox container!</h2>
         </div>
 
-        <section>
-            <!-- Agregar titulo al acordion; Cambiar color al acordion; Corregir el tama#o del contenedor del acordio, hacer menos ancho -->
+        <!-- Agregar banda con animaciones y movimiento -->
+
+        <section id="section-of-accordion">
+
+            <!-- titulo de accordion -->
+            <div class="accordion-title">
+                <h3>What I do?</h3>
+            </div>
+            <!-- Agregar titulo al acordion -->
             <!-- Acordeón -->
-            <div class="accordion mx-5" id="accordionWhatIDo">
+            <div class="accordion accordion-custom mx-5">
                 <!-- Item 1: Web Development -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingWeb">
@@ -81,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Item 2: Mobile Development -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingMobile">
@@ -101,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Item 3: UI/UX Design & Prototyping -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingDesign">
@@ -122,14 +123,13 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
-        <section class="projects-images">
+        <section>
 
-            <!-- cambiar clase usar un ID; Dar formato a las imagenes aumentan el alto de este contenedor-->
-            <div class="sectionen"> 
-                <h4 id="projects">My Projects</h4>
+            <div id="projects-images">
+                <h3 id="projects">My Projects</h3>
                 <div class="container text-center">
                     <div class="row row-cols-2">
                         <div class="col">
@@ -148,20 +148,24 @@
 
         </section>
 
-        <section class="sectionen">
+        <section>
 
-            <h3>Skill</h3>
+            <div id="skill">
+                <h3>Skill</h3>
                 <p>HTML, CSS, Java, Python</p>
                 <p>Linux, Windows, Jira & Confluence Administration</p>
+            </div>
 
         </section>
 
-        <section class="sectionen">
+        <section>
 
-            <h3 id="contact">Contact</h3>
-            <p>Email: it@victor-arcon.de</p>
-            <p>Telefonnummer: +4915251070744</p>
-            <p>Standord: Plauen, Sachsen</p>
+            <div id="contact">
+                <h3>Contact</h3>
+                <p>Email: it@victor-arcon.de</p>
+                <p>Telefonnummer: +4915251070744</p>
+                <p>Standord: Plauen, Sachsen</p>
+            </div>
 
         </section>
 
@@ -174,6 +178,20 @@
     <!-- Script de Bootstrap al final -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
+
+    <script>
+        document.querySelectorAll('.menu li a').forEach(link => {
+            link.addEventListener('click', function () {
+                // Elimina la clase active de todos los <li>
+                document.querySelectorAll('.menu li').forEach(item => item.classList.remove('active'));
+
+                // Añade la clase active al <li> padre del enlace clicado
+                this.parentElement.classList.add('active');
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
