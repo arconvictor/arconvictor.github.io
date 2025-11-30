@@ -24,105 +24,112 @@
     </header>
 
     <main>
-        <div class="container text-center">
+        <section>
             <div class="container text-center">
-                <div class="row">
-                    <div class="col p-5">
-                        <p id="titulo">Hi, i am Victor Manuel Arcon Perez<br></p>
-                        <h1 id="especialidad">Computer Science Experte</h1>
-                        <div class="container text-center">
-                            <div class="row">
-                                <div class="col mt-5 mb-custom">
-                                    <a
-                                        href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES"><img
-                                            alt="Linkedin" src="assets/img/linkedin.svg" width="80" height="80"></a>
-                                </div>
-                                <div class="col mt-5 mb-custom">
-                                    <a href="https://github.com/arconvictor"><img alt="Github"
-                                            src="assets/img/github-brands-solid-full.svg" width="80" height="80"></a>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col p-5">
+                            <p id="titulo">Hi, i am Victor Manuel Arcon Perez<br></p>
+                            <h1 id="especialidad">Computer Science Experte</h1>
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col mt-5 mb-custom">
+                                        <a
+                                            href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES"><img
+                                                alt="Linkedin" src="assets/img/linkedin.svg" width="80" height="80"></a>
+                                    </div>
+                                    <div class="col mt-5 mb-custom">
+                                        <a href="https://github.com/arconvictor"><img alt="Github"
+                                                src="assets/img/github-brands-solid-full.svg" width="80" height="80"></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col p-5">
-                        <p class="text-white fs-3">Transforming ideas into interactive and seamless digital experiences
-                            with cutting-edge frontend development.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="d-flex p-2 mb-customs bd-highlight bg-white justify-content-center">
-            I'm a flexbox container!
-        </div>
-
-        <!-- Acordeón -->
-        <section class="accordion" id="accordionWhatIDo">
-            <!-- Item 1: Web Development -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingWeb">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseWeb" aria-expanded="false" aria-controls="collapseWeb">
-                        Web Development
-                    </button>
-                </h2>
-                <div id="collapseWeb" class="accordion-collapse collapse" aria-labelledby="headingWeb"
-                    data-bs-parent="#accordionWhatIDo">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Single Page Applications (SPAs)</li>
-                            <li>Landing pages and business websites</li>
-                            <li>Portfolio websites</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 2: Mobile Development -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingMobile">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseMobile" aria-expanded="false" aria-controls="collapseMobile">
-                        Mobile Development
-                    </button>
-                </h2>
-                <div id="collapseMobile" class="accordion-collapse collapse" aria-labelledby="headingMobile"
-                    data-bs-parent="#accordionWhatIDo">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Android native apps</li>
-                            <li>Modular UI design</li>
-                            <li>Rule engine integration</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 3: UI/UX Design & Prototyping -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingDesign">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseDesign" aria-expanded="false" aria-controls="collapseDesign">
-                        UI/UX Design & Prototyping
-                    </button>
-                </h2>
-                <div id="collapseDesign" class="accordion-collapse collapse" aria-labelledby="headingDesign"
-                    data-bs-parent="#accordionWhatIDo">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Wireframes and mockups</li>
-                            <li>Color psychology and accessibility</li>
-                            <li>Interactive prototypes</li>
-                        </ul>
+                        <div class="col p-5">
+                            <p class="text-white fs-3">Transforming ideas into interactive and seamless digital experiences
+                                with cutting-edge frontend development.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <div class="d-flex p-5 mt-custom-1 mt-custom-1 bd-highlight bg-custom-1 text-white justify-content-center">
+            <h2>I'm a flexbox container!</h2>
+        </div>
+
+        <section>
+            <!-- Agregar titulo al acordion; Cambiar color al acordion; Corregir el tama#o del contenedor del acordio, hacer menos ancho -->
+            <!-- Acordeón -->
+            <div class="accordion mx-5" id="accordionWhatIDo">
+                <!-- Item 1: Web Development -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingWeb">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWeb" aria-expanded="false" aria-controls="collapseWeb">
+                            Web Development
+                        </button>
+                    </h2>
+                    <div id="collapseWeb" class="accordion-collapse collapse" aria-labelledby="headingWeb"
+                        data-bs-parent="#accordionWhatIDo">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Single Page Applications (SPAs)</li>
+                                <li>Landing pages and business websites</li>
+                                <li>Portfolio websites</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Item 2: Mobile Development -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMobile">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseMobile" aria-expanded="false" aria-controls="collapseMobile">
+                            Mobile Development
+                        </button>
+                    </h2>
+                    <div id="collapseMobile" class="accordion-collapse collapse" aria-labelledby="headingMobile"
+                        data-bs-parent="#accordionWhatIDo">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Android native apps</li>
+                                <li>Modular UI design</li>
+                                <li>Rule engine integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Item 3: UI/UX Design & Prototyping -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingDesign">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDesign" aria-expanded="false" aria-controls="collapseDesign">
+                            UI/UX Design & Prototyping
+                        </button>
+                    </h2>
+                    <div id="collapseDesign" class="accordion-collapse collapse" aria-labelledby="headingDesign"
+                        data-bs-parent="#accordionWhatIDo">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Wireframes and mockups</li>
+                                <li>Color psychology and accessibility</li>
+                                <li>Interactive prototypes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
         <section class="projects-images">
-            <section class="sectionen">
-                <h4>My work</h4>
-                <h3 id="projects">Projects</h3>
+
+            <!-- cambiar clase usar un ID; Dar formato a las imagenes aumentan el alto de este contenedor-->
+            <div class="sectionen"> 
+                <h4 id="projects">My Projects</h4>
                 <div class="container text-center">
                     <div class="row row-cols-2">
                         <div class="col">
@@ -137,23 +144,27 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
         </section>
 
         <section class="sectionen">
+
             <h3>Skill</h3>
-            <ul id="style">
-                <li>HTML, CSS, Java, Python</li>
-                <li>Linux, Windows, Jira & Confluence Administration</li>
-            </ul>
+                <p>HTML, CSS, Java, Python</p>
+                <p>Linux, Windows, Jira & Confluence Administration</p>
+
         </section>
 
         <section class="sectionen">
+
             <h3 id="contact">Contact</h3>
             <p>Email: it@victor-arcon.de</p>
             <p>Telefonnummer: +4915251070744</p>
             <p>Standord: Plauen, Sachsen</p>
+
         </section>
+
     </main>
 
     <footer>
