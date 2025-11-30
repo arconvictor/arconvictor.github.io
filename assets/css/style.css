@@ -19,6 +19,7 @@ html {
 
     --linkedin-border: #00FFFF;
     --github-border: #9811ce;
+    
 }
 
 body {
@@ -37,8 +38,8 @@ header {
 }
 
 nav {
-    padding-top: 30px;
-    padding-bottom: 15px;
+    padding-top: 3%;
+    padding-bottom: 1%;
     border-radius: 15px;
 }
 
@@ -46,14 +47,14 @@ nav {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 30px;
+    gap: 2%;
 }
 
 .menu li {
     color: var(--text-color);
     font-size: 22px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 1%;
     cursor: pointer;
 }
 
@@ -65,7 +66,7 @@ nav {
     transform: translateY(-50%);
     width: 8px;
     height: 8px;
-    background-color: #00FFFF;
+    background-color: var(--accent-color);
     border-radius: 50%;
 }
 .menu li.active .dot {
@@ -79,14 +80,16 @@ nav {
 section {
     background-color: #3a3a4a;
     color: var(--text-color);
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    padding-right: 50px;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-bottom: 3%;
+    padding-right: 3%;
     margin: 10px auto;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1600px;
+    min-width: 300px;
     border-radius: 20px;
+    /* revisar contraste de sombra de contenedores */
     box-shadow: 1px 1px 1px 1px #2c2c2c;
 }
 
@@ -95,11 +98,11 @@ a {
 }
 
 a:link {
-    color: rgb(114, 107, 202);
+    color: var(--github-border);
 }
 
 a:visited {
-    color: var(--text-color);
+    color: var(--github-border);
     text-decoration: none;
 }
 
@@ -108,63 +111,54 @@ a:hover {
     text-decoration: underline;
 }
 
+/* elegir un mejor color para el link activo */
 a:active {
-    color: coral;
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
-footer {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: var(--text-color);
-}
-
 #home {
-    scroll-margin-top: 120px;
-    height: 330px;
+    scroll-margin-top: 170px;
 }
 
-.padding-custom-icons-in {
+.efect-in {
     gap: 0.5rem;
     flex: 0 0 auto;
     width: auto;
-    padding-left: 170px !important;
-    padding-right: 0 !important;
+    padding-left: 11vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Estilo visual para los iconos */
-.padding-custom-icons-in img {
+.efect-in img {
     border: 2px solid var(--linkedin-border);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efecto al pasar el cursor */
-.padding-custom-icons-in img:hover {
+.efect-in img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 12px var(--shadow-color);
 }
 
-.padding-custom-icons-git {
+.efect-git {
     gap: 0.5rem;
     flex: 0 0 auto;
     width: auto;
-    padding-left: 90px !important;
-    padding-right: 0 !important;
+    padding-left: 4vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Estilo visual para los iconos */
-.padding-custom-icons-git img {
+.efect-git img {
     border: 2px solid var(--github-border);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efecto al pasar el cursor */
-.padding-custom-icons-git img:hover {
+.efect-git img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 12px var(--shadow-color)
 }
@@ -189,25 +183,23 @@ footer {
 } */
 
 .accordion-title {
-    max-width: 180px;
-    max-height: 800px;
-    margin-top: 20px;
-    margin-left: 225px;
+    margin-top: 1%;
+    margin-left: 16%;
     margin-right: auto;
+    margin-bottom: 1%;
 }
 
 .accordion-custom {
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow-color);
-    max-width: 500px;
+    max-width: 600px;
     max-height: 800px;
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .accordion-item {
-    margin-bottom: 1rem;
+    margin-bottom: 2%;
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow-color);
     background-color: var(--bg-color);
@@ -229,7 +221,7 @@ footer {
 
 #projects {
     text-align: center;
-    scroll-margin-top: 145px;
+    scroll-margin-top: 210px;
 }
 
 #projects-images {
@@ -267,7 +259,13 @@ footer {
     padding-left: 30px;
 }
 
-/* Responsive */
+footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-color);
+}
+
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
@@ -285,3 +283,15 @@ footer {
         margin-right: 1rem;
     }
 }
+
+@media  (min-width:2560){
+    
+}
+
+
+
+
+
+/* crear configuraciones para menos de 768 y para 4k corregir el margen de el titulo de acordion
+y en el caso del menu que permanezca alineado em eö @media
+*/
