@@ -19,7 +19,7 @@ html {
 
     --linkedin-border: #00FFFF;
     --github-border: #9811ce;
-    
+
 }
 
 body {
@@ -47,14 +47,14 @@ nav {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 2%;
+    gap: 2.5%;
 }
 
 .menu li {
     color: var(--text-color);
-    font-size: 22px;
+    font-size: 36px;
     position: relative;
-    padding-left: 1%;
+    padding-left: 1.5%;
     cursor: pointer;
 }
 
@@ -69,8 +69,9 @@ nav {
     background-color: var(--accent-color);
     border-radius: 50%;
 }
+
 .menu li.active .dot {
-  display: inline-block;
+    display: inline-block;
 }
 
 .menu li:hover {
@@ -122,10 +123,6 @@ a:active {
 }
 
 .efect-in {
-    gap: 0.5rem;
-    flex: 0 0 auto;
-    width: auto;
-    padding-left: 11vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -143,10 +140,6 @@ a:active {
 }
 
 .efect-git {
-    gap: 0.5rem;
-    flex: 0 0 auto;
-    width: auto;
-    padding-left: 4vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -163,19 +156,17 @@ a:active {
     box-shadow: 0 0 12px var(--shadow-color)
 }
 
-.mtb-custom-1 {
+.d-flex-custom {
+    /* Luego de configuracion cambiar a tama#o variable % */
     margin-top: 70px;
     margin-bottom: 100px;
     border-radius: 1px;
     box-shadow: 1px 1px 1px 1px var(--shadow-color);
 }
 
-.mb-custom {
-    margin-bottom: 60px;
-}
-
-.bg-custom-1 {
-    background-color: var(--bg-color-section);
+.d-flex-bg-custom {
+    /* color temporal */
+    background-color: rgb(11, 26, 26);
 }
 
 /* #section-of-accordion {
@@ -184,7 +175,7 @@ a:active {
 
 .accordion-title {
     margin-top: 1%;
-    margin-left: 16%;
+    margin-left: 5%;
     margin-right: auto;
     margin-bottom: 1%;
 }
@@ -219,44 +210,33 @@ a:active {
     border-left: 4px solid #00FFFF;
 }
 
-#projects {
+#projects-title {
     text-align: center;
     scroll-margin-top: 210px;
 }
 
-#projects-images {
+#projects-container-with-images img {
+    /* contenedor recibe de la clase section su ancho y el object-fit: cover se encarga de que la imagen se adap te al tama#o del contenedor con la ayuda de su fila, columna y img-fluid de Boottraps*/
+    margin-top: 6%;
+    margin-bottom: 4%;
     height: 300px;
-    width: 100%;
-}
-
-#projects-images .col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-#projects-images img {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 200px;
     object-fit: cover;
 }
 
-#projects-images .col:first-child img {
+#projects-container-with-images .col:first-child img {
     box-shadow: 0 0 12px var(--accent-color);
 }
 
-#projects-images .col:last-child img {
+#projects-container-with-images .col:last-child img {
     box-shadow: 0 0 12px var(--github-border);
 }
 
 #skill {
-    padding-left: 30px;
+    padding-left: 3%;
 }
 
 #contact {
-    padding-left: 30px;
+    padding-left: 3%;
 }
 
 footer {
@@ -266,32 +246,220 @@ footer {
     color: var(--text-color);
 }
 
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        gap: 15px;
+
+@media (min-width: 850px) and (max-width: 1200px) {
+
+    .menu li {
+        color: var(--text-color);
+        font-size: 25px;
+        position: relative;
+        padding-left: 2.5%;
+        cursor: pointer;
     }
 
-    .row-iconos {
-        flex-wrap: wrap;
-        justify-content: center;
+    .efect-in {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 1%;
     }
 
-    .accordion-custom {
-        max-width: 100%;
-        margin-left: 1rem;
-        margin-right: 1rem;
+    .efect-git {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 11%;
     }
+
+    .accordion-title {
+        margin-top: 1%;
+        margin-left: 6%;
+        margin-right: auto;
+        margin-bottom: 1%;
+    }
+
+    #projects-container-with-images img {
+        margin-top: 6%;
+        margin-bottom: 4%;
+        height: 250px;
+        object-fit: cover;
+    }
+
 }
 
-@media  (min-width:2560){
-    
+@media (min-width: 630px) and (max-width: 849px) {
+
+    .menu li {
+        color: var(--text-color);
+        font-size: 24px;
+        position: relative;
+        padding-left: 2.5%;
+        cursor: pointer;
+    }
+
+    .efect-in {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 1%;
+    }
+
+    .efect-git {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 12%;
+    }
+
+    .accordion-title {
+        margin-top: 1%;
+        margin-left: 8%;
+        margin-right: auto;
+        margin-bottom: 1%;
+    }
+
+    #projects-container-with-images img {
+        margin-top: 6%;
+        margin-bottom: 4%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+}
+
+@media (min-width: 530px) and (max-width: 629px) {
+
+    .menu li {
+        color: var(--text-color);
+        font-size: 23px;
+        position: relative;
+        padding-left: 3%;
+        cursor: pointer;
+    }
+
+    .efect-in {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 1%;
+    }
+
+    .efect-git {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 20%;
+    }
+
+    .accordion-title {
+        margin-top: 1%;
+        margin-left: 10%;
+        margin-right: auto;
+        margin-bottom: 1%;
+    }
+
+    #projects-container-with-images img {
+        margin-top: 6%;
+        margin-bottom: 4%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+}
+
+@media (min-width: 430px) and (max-width: 529px) {
+
+    .menu li {
+        color: var(--text-color);
+        font-size: 21px;
+        position: relative;
+        padding-left: 4%;
+        cursor: pointer;
+    }
+
+    .efect-in {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 1%;
+    }
+
+    .efect-git {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 20%;
+    }
+
+    .accordion-title {
+        margin-top: 1%;
+        margin-left: 12%;
+        margin-right: auto;
+        margin-bottom: 1%;
+    }
+
+    #projects-container-with-images img {
+        margin-top: 6%;
+        margin-bottom: 4%;
+        height: 190px;
+        object-fit: cover;
+    }
+
 }
 
 
+@media (min-width: 346px) and (max-width: 429px) {
+
+    .menu li {
+        color: var(--text-color);
+        font-size: 20px;
+        position: relative;
+        padding-left: 5%;
+        cursor: pointer;
+    }
+
+    .efect-in {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 1%;
+    }
+
+    .efect-git {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 19%;
+    }
+
+    .accordion-title {
+        margin-top: 1%;
+        margin-left: 14%;
+        margin-right: auto;
+        margin-bottom: 1%;
+    }
+
+    #projects-container-with-images img {
+        margin-top: 6%;
+        margin-bottom: 4%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+}
 
 
+@media (max-width: 345px) {
 
-/* crear configuraciones para menos de 768 y para 4k corregir el margen de el titulo de acordion
-y en el caso del menu que permanezca alineado em eö @media
-*/
+    .menu li {
+        color: var(--text-color);
+        font-size: 18px;
+        position: relative;
+        padding-left: 5%;
+        cursor: pointer;
+    }
+
+    .efect-in {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 1%;
+    }
+
+    .efect-git {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding-bottom: 16%;
+    }
+
+    .accordion-title {
+        margin-top: 1%;
+        margin-left: 16%;
+        margin-right: auto;
+        margin-bottom: 1%;
+    }
+
+    #projects-container-with-images img {
+        margin-top: 6%;
+        margin-bottom: 4%;
+        height: 150px;
+        object-fit: cover;
+    }
+}
