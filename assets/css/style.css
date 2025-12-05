@@ -165,7 +165,6 @@ img:hover {
 }
 
 
-
 #home {
     scroll-margin-top: 170px;
 }
@@ -206,10 +205,31 @@ img:hover {
     box-shadow: 0 0 12px var(--shadow-color)
 }
 
+/* .tech-band-container {
+
+
+} */
+
+.tech-band {
+    animation: slide-band 30s linear infinite;
+}
+
+.tech-band li {
+    flex-shrink: 0; 
+}
+
+/* Definición de la animación de movimiento */
+@keyframes slide-band {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Se desliza exactamente la mitad del ancho extra */
+    }
+}
+
 .d-flex-custom {
     /* Luego de configuracion cambiar a tama#o variable % */
-    margin-top: 70px;
-    margin-bottom: 100px;
     border-radius: 1px;
     box-shadow: 1px 1px 1px 1px var(--shadow-color);
 }
@@ -370,7 +390,7 @@ footer {
 
 }
 
-@media (min-width: 530px) and (max-width: 629px) {
+@media (min-width: 530px) and (max-width: 585px) {
 
     .menu li {
         color: var(--text-color);
@@ -382,12 +402,12 @@ footer {
 
     .efect-in {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 1%;
+        padding-bottom: 6%;
     }
 
     .efect-git {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 20%;
+        padding-bottom: 6%;
     }
 
     .accordion-title {
@@ -418,12 +438,12 @@ footer {
 
     .efect-in {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 1%;
+        padding-bottom: 7%;
     }
 
     .efect-git {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 20%;
+        padding-bottom: 7%;
     }
 
     .accordion-title {
@@ -455,12 +475,12 @@ footer {
 
     .efect-in {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 1%;
+        padding-bottom: 8%;
     }
 
     .efect-git {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 19%;
+        padding-bottom: 8%;
     }
 
     .accordion-title {
@@ -492,12 +512,12 @@ footer {
 
     .efect-in {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 1%;
+        padding-bottom: 8%;
     }
 
     .efect-git {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding-bottom: 16%;
+        padding-bottom 88%;
     }
 
     .accordion-title {
