@@ -208,12 +208,12 @@ img:hover {
 
 .tech-band-container {
     width: 100%;
-    overflow:hidden;
-    
+    overflow: hidden;
+
 }
 
-.tech-band{
-    animation: slide-band 50s linear infinite;
+.tech-band {
+    animation: slide-band 35s linear infinite;
     width: 360%;
 }
 
@@ -343,6 +343,11 @@ footer {
         padding-bottom: 11%;
     }
 
+        .tech-band {
+        animation: slide-band 15s linear infinite;
+        width: 360%;
+    }
+
     .accordion-title {
         margin-top: 1%;
         margin-left: 6%;
@@ -378,6 +383,12 @@ footer {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         padding-bottom: 12%;
     }
+
+        .tech-band {
+        animation: slide-band 14s linear infinite;
+        width: 360%;
+    }
+
 
     .accordion-title {
         margin-top: 1%;
@@ -415,6 +426,12 @@ footer {
         padding-bottom: 6%;
     }
 
+        .tech-band {
+        animation: slide-band 13s linear infinite;
+        width: 360%;
+    }
+
+
     .accordion-title {
         margin-top: 1%;
         margin-left: 10%;
@@ -449,6 +466,11 @@ footer {
     .efect-git {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         padding-bottom: 7%;
+    }
+
+    .tech-band {
+        animation: slide-band 12s linear infinite;
+        width: 360%;
     }
 
     .accordion-title {
@@ -488,6 +510,11 @@ footer {
         padding-bottom: 8%;
     }
 
+    .tech-band {
+        animation: slide-band 10s linear infinite;
+        width: 360%;
+    }
+
     .accordion-title {
         margin-top: 1%;
         margin-left: 14%;
@@ -507,6 +534,7 @@ footer {
 
 @media (max-width: 345px) {
 
+
     .menu li {
         color: var(--text-color);
         font-size: 18px;
@@ -523,6 +551,11 @@ footer {
     .efect-git {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         padding-bottom 88%;
+    }
+
+    .tech-band {
+        animation: slide-band 8s linear infinite;
+        width: 360%;
     }
 
     .accordion-title {
