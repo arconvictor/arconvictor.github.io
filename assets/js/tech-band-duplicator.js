@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Define CUÁNTAS VECES quieres que se repita el contenido
-    const totalCopies = 3; // Puedes cambiar 3 por 2 (duplicar) o 4 (cuadruplicar), etc.
+    
+    const totalCopies = 3;
     
     const originalList = document.getElementById('tech-list-original');
     
