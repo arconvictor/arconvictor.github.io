@@ -1,0 +1,65 @@
+<svg width="1000" height="500" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace">
+  <rect width="1000" height="500" fill="#05070a"/>
+
+  <text x="40" y="48" font-size="17" fill="#9aa7b8">$ ~/homelab topology --overview</text>
+
+  <!-- Node 1 -->
+  <rect x="40" y="80" width="430" height="288" rx="14" fill="#0c1420" stroke="#00e5ff" stroke-width="2"/>
+  <text x="62" y="120" font-size="19" font-weight="700" fill="#00e5ff">NODE 1</text>
+  <text x="62" y="145" font-size="13" fill="#55637a">Proxmox VE</text>
+
+  <rect x="62" y="165" width="185" height="50" rx="8" fill="#131d2c" stroke="#00e5ff" stroke-opacity="0.5"/>
+  <text x="154" y="196" font-size="13.5" fill="#eaeaea" text-anchor="middle">DNS (Primary)</text>
+
+  <rect x="257" y="165" width="185" height="50" rx="8" fill="#131d2c" stroke="#00e5ff" stroke-opacity="0.5"/>
+  <text x="349" y="196" font-size="13.5" fill="#eaeaea" text-anchor="middle">Reverse Proxy (Active)</text>
+
+  <rect x="62" y="230" width="185" height="50" rx="8" fill="#131d2c" stroke="#00e5ff" stroke-opacity="0.5"/>
+  <text x="154" y="261" font-size="13.5" fill="#eaeaea" text-anchor="middle">Secrets Vault</text>
+
+  <rect x="257" y="230" width="185" height="50" rx="8" fill="#131d2c" stroke="#00e5ff" stroke-opacity="0.5"/>
+  <text x="349" y="261" font-size="13.5" fill="#eaeaea" text-anchor="middle">Wiki / Docs</text>
+
+  <rect x="62" y="295" width="380" height="50" rx="8" fill="#131d2c" stroke="#00e5ff" stroke-opacity="0.5"/>
+  <text x="252" y="326" font-size="13.5" fill="#eaeaea" text-anchor="middle">~15 application &amp; service containers</text>
+
+  <!-- Node 2 -->
+  <rect x="530" y="80" width="430" height="288" rx="14" fill="#0c1420" stroke="#ff3df0" stroke-width="2"/>
+  <text x="552" y="120" font-size="19" font-weight="700" fill="#ff3df0">NODE 2</text>
+  <text x="552" y="145" font-size="13" fill="#55637a">Proxmox VE</text>
+
+  <rect x="552" y="165" width="185" height="50" rx="8" fill="#131d2c" stroke="#ff3df0" stroke-opacity="0.5"/>
+  <text x="644" y="196" font-size="13.5" fill="#eaeaea" text-anchor="middle">Reverse Proxy (Standby)</text>
+
+  <rect x="747" y="165" width="185" height="50" rx="8" fill="#131d2c" stroke="#ff3df0" stroke-opacity="0.5"/>
+  <text x="839" y="196" font-size="13.5" fill="#eaeaea" text-anchor="middle">DNS (Secondary)</text>
+
+  <rect x="552" y="230" width="185" height="50" rx="8" fill="#131d2c" stroke="#ff3df0" stroke-opacity="0.5"/>
+  <text x="644" y="261" font-size="13.5" fill="#eaeaea" text-anchor="middle">IaC Control</text>
+
+  <rect x="747" y="230" width="185" height="50" rx="8" fill="#131d2c" stroke="#ff3df0" stroke-opacity="0.5"/>
+  <text x="839" y="261" font-size="13.5" fill="#eaeaea" text-anchor="middle">Monitoring Stack</text>
+
+  <rect x="552" y="295" width="380" height="50" rx="8" fill="#131d2c" stroke="#ff3df0" stroke-opacity="0.5"/>
+  <text x="742" y="326" font-size="13.5" fill="#eaeaea" text-anchor="middle">~15 application &amp; service containers</text>
+
+  <!-- HA connector between the two reverse proxies -->
+  <line x1="442" y1="190" x2="552" y2="190" stroke="#eaeaea" stroke-width="1.5" stroke-dasharray="5,5" stroke-opacity="0.6"/>
+  <circle cx="497" cy="190" r="4" fill="#eaeaea"/>
+  <text x="497" y="176" font-size="12.5" fill="#9aa7b8" text-anchor="middle">Keepalived · VRRP · shared VIP</text>
+
+  <!-- Bottom summary bar -->
+  <g font-size="14" fill="#eaeaea">
+    <circle cx="55" cy="397" r="4.5" fill="#00e5ff"/>
+    <text x="70" y="402">Firewall: default-deny, per-service rules</text>
+
+    <circle cx="55" cy="426" r="4.5" fill="#ff3df0"/>
+    <text x="70" y="431">IaC: Ansible + Terraform/OpenTofu</text>
+
+    <circle cx="55" cy="455" r="4.5" fill="#00e5ff"/>
+    <text x="70" y="460">40+ services monitored (Grafana/Loki/Prometheus)</text>
+
+    <circle cx="55" cy="484" r="4.5" fill="#ff3df0"/>
+    <text x="70" y="489">Automatic failover on reverse-proxy loss (~2-3s)</text>
+  </g>
+</svg>

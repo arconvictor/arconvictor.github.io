@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Arcon — Backend Developer &amp; Linux Systems Specialist</title>
+    <meta name="description" content="Portfolio of Victor Arcon, an IHK-certified application developer (Fachinformatiker) based in Germany, specializing in Java backend development, database tooling, and Linux systems administration.">
+    <meta property="og:title" content="Victor Arcon — Backend Developer &amp; Linux Systems Specialist">
+    <meta property="og:description" content="Backend development, database tooling and Linux systems administration — IHK-certified Fachinformatiker für Anwendungsentwicklung based in Plauen, Germany.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Set theme + language before first paint, so there's no flash of the wrong theme/language -->
+    <script>
+        (function () {
+            var stored = localStorage.getItem('theme');
+            var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+
+            var SUPPORTED_LANGS = ['en', 'de', 'es'];
+            var storedLang = localStorage.getItem('lang');
+            var navLang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+            var lang = (storedLang && SUPPORTED_LANGS.indexOf(storedLang) > -1) ? storedLang
+                : (SUPPORTED_LANGS.indexOf(navLang) > -1 ? navLang : 'en');
+            document.documentElement.setAttribute('data-lang', lang);
+            document.documentElement.setAttribute('lang', lang);
+
+            // Only hide .reveal elements (see scroll-reveal.js) when JS is actually
+            // available to un-hide them later — otherwise content must stay visible.
+            document.documentElement.classList.add('js');
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="active">
+                    <a href="#home">
+                        <span data-i18n="en">Home</span><span data-i18n="de">Start</span><span data-i18n="es">Inicio</span>
+                    </a><span class="dot"></span>
+                </li>
+                <li>
+                    <a href="#projects-title">
+                        <span data-i18n="en">Projects</span><span data-i18n="de">Projekte</span><span data-i18n="es">Proyectos</span>
+                    </a><span class="dot"></span>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <span data-i18n="en">Contact</span><span data-i18n="de">Kontakt</span><span data-i18n="es">Contacto</span>
+                    </a><span class="dot"></span>
+                </li>
+            </ul>
+
+            <div class="nav-controls">
+                <div class="lang-switch" role="group" aria-label="Language / Sprache / Idioma">
+                    <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+                    <button type="button" data-lang-btn="de" aria-pressed="false">DE</button>
+                    <button type="button" data-lang-btn="es" aria-pressed="false">ES</button>
+                </div>
+
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" aria-pressed="false">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container text-center">
+                <p class="eyebrow">~/victor-arcon whoami</p>
+                <p class="hero-name">
+                    <span data-i18n="en">Hi, I'm Victor Arcon</span>
+                    <span data-i18n="de">Hallo, ich bin Victor Arcon</span>
+                    <span data-i18n="es">Hola, soy Victor Arcon</span>
+                </p>
+                <h1 class="hero-title">
+                    <span data-i18n="en">Backend Developer &amp; Linux Systems Specialist</span>
+                    <span data-i18n="de">Backend-Entwickler &amp; Linux-Systemspezialist</span>
+                    <span data-i18n="es">Desarrollador Backend y Especialista en Sistemas Linux</span>
+                </h1>
+                <p class="hero-bio">
+                    <span data-i18n="en">From law enforcement in Venezuela to IHK-certified software development in
+                        Germany. I build backend services, database tooling, and the web interfaces on top of them —
+                        with a habit of caring about audit trails, correctness, and things not silently breaking.</span>
+                    <span data-i18n="de">Vom Polizeidienst in Venezuela zur IHK-zertifizierten Softwareentwicklung in
+                        Deutschland. Ich entwickle Backend-Services, Datenbank-Tools und die Weboberflächen darüber —
+                        mit einem besonderen Blick für Audit-Trails, Korrektheit und dafür, dass nichts unbemerkt
+                        kaputtgeht.</span>
+                    <span data-i18n="es">De las fuerzas del orden en Venezuela al desarrollo de software certificado
+                        por la IHK en Alemania. Construyo servicios backend, herramientas de bases de datos y las
+                        interfaces web que los acompañan — con la costumbre de cuidar los registros de auditoría, la
+                        corrección, y que nada falle en silencio.</span>
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects-title" class="btn-signature">
+                        <span data-i18n="en">View Projects</span>
+                        <span data-i18n="de">Projekte ansehen</span>
+                        <span data-i18n="es">Ver Proyectos</span>
+                    </a>
+                    <a href="#contact" class="btn-outline">
+                        <span data-i18n="en">Get in Touch</span>
+                        <span data-i18n="de">Kontakt aufnehmen</span>
+                        <span data-i18n="es">Ponerse en Contacto</span>
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a class="social-icon" href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES" aria-label="LinkedIn profile">
+                        <img alt="" src="assets/img/Profile-Images/linkedin.svg" width="26" height="26">
+                    </a>
+                    <a class="social-icon" href="https://github.com/arconvictor" aria-label="GitHub profile">
+                        <img alt="" src="assets/img/Profile-Images/github-brands-solid-full.svg" width="26" height="26">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="tech-band-container">
+            <ul id="tech-list-original" class="list-unstyled tech-band">
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Java/icons8-java-100.png" alt="Java" class="me-2">
+                    <span>Java</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-SprintBoot/icons8-spring-boot-100-2.png" alt="Spring Boot" class="me-2">
+                    <span>Spring Boot</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Confluence/confluence.ico" alt="Confluence" class="me-2">
+                    <span>Confluence</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Jira/icons8-jira-100-3.png" alt="Jira" class="me-2">
+                    <span>Jira</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-HTML/icons8-html-100-2.png" alt="HTML" class="me-2">
+                    <span>HTML</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-CSS/icons8-css-100-6.png" alt="CSS" class="me-2">
+                    <span>CSS</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Bootstraps/icons8-bootstrap-100-2.png" alt="Bootstrap" class="me-2">
+                    <span>Bootstrap</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Javascript/icons8-javascript-100 (1).png" alt="JavaScript" class="me-2">
+                    <span>JavaScript</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Python/icons8-python-100-2.png" alt="Python" class="me-2">
+                    <span>Python</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Oracle/icons8-oracle-100.png" alt="Oracle" class="me-2">
+                    <span>Oracle</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-MySQL/icons8-mysql-100-5.png" alt="MySQL" class="me-2">
+                    <span>MySQL</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Docker/icons8-docker-100.png" alt="Docker" class="me-2">
+                    <span>Docker</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-GitLab/icons8-gitlab-100-2.png" alt="GitLab" class="me-2">
+                    <span>GitLab</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-GitHub/icons8-github-100-3.png" alt="GitHub" class="me-2">
+                    <span>GitHub</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Linux/icons8-linux-100-3.png" alt="Linux" class="me-2">
+                    <span>Linux</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Bash/icons8-bash-100-3.png" alt="Bash" class="me-2">
+                    <span>Bash</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Window/icons8-windows-100-2.png" alt="Windows" class="me-2">
+                    <span>Windows</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Quarkus/simple-icons-quarkus.svg" alt="Quarkus" class="me-2">
+                    <span>Quarkus</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Hibernate/simple-icons-hibernate.svg" alt="Hibernate ORM" class="me-2">
+                    <span>Hibernate ORM</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Liquibase/simple-icons-liquibase.svg" alt="Liquibase" class="me-2">
+                    <span>Liquibase</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Vault/simple-icons-vault.svg" alt="HashiCorp Vault" class="me-2">
+                    <span>HashiCorp Vault</span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Ansible/simple-icons-ansible.svg" alt="Ansible" class="me-2">
+                    <span>Ansible</span>
+                    <span class="skill-learning-badge">
+                        <span data-i18n="en">Learning</span>
+                        <span data-i18n="de">Lernend</span>
+                        <span data-i18n="es">Aprendiendo</span>
+                    </span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Grafana/simple-icons-grafana.svg" alt="Grafana" class="me-2">
+                    <span>Grafana</span>
+                    <span class="skill-learning-badge">
+                        <span data-i18n="en">Learning</span>
+                        <span data-i18n="de">Lernend</span>
+                        <span data-i18n="es">Aprendiendo</span>
+                    </span>
+                </li>
+                <li class="d-flex align-items-center p-4">
+                    <img src="assets/img/Icons-Proxmox/simple-icons-proxmox.svg" alt="Proxmox VE" class="me-2">
+                    <span>Proxmox VE</span>
+                </li>
+            </ul>
+        </div>
+
+        <section id="section-of-accordion" class="reveal">
+            <div class="accordion-title">
+                <h3>
+                    <span data-i18n="en">What I do?</span>
+                    <span data-i18n="de">Was ich mache</span>
+                    <span data-i18n="es">Qué hago</span>
+                </h3>
+            </div>
+            <div class="accordion accordion-custom mx-auto" id="accordionWhatIDo">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingBackend">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseBackend" aria-expanded="true" aria-controls="collapseBackend">
+                            <span data-i18n="en">Backend Development</span>
+                            <span data-i18n="de">Backend-Entwicklung</span>
+                            <span data-i18n="es">Desarrollo Backend</span>
+                        </button>
+                    </h2>
+                    <div id="collapseBackend" class="accordion-collapse collapse show" aria-labelledby="headingBackend"
+                        data-bs-parent="#accordionWhatIDo">
+                        <div class="accordion-body">
+                            <ul>
+                                <li data-i18n="en">Java (Spring Boot, Quarkus)</li>
+                                <li data-i18n="de">Java (Spring Boot, Quarkus)</li>
+                                <li data-i18n="es">Java (Spring Boot, Quarkus)</li>
+
+                                <li data-i18n="en">REST API design &amp; implementation</li>
+                                <li data-i18n="de">REST-API-Design &amp; Implementierung</li>
+                                <li data-i18n="es">Diseño e implementación de APIs REST</li>
+
+                                <li data-i18n="en">Database integration (Oracle, MySQL)</li>
+                                <li data-i18n="de">Datenbankintegration (Oracle, MySQL)</li>
+                                <li data-i18n="es">Integración de bases de datos (Oracle, MySQL)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSysadmin">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSysadmin" aria-expanded="false" aria-controls="collapseSysadmin">
+                            <span data-i18n="en">Systems Administration</span>
+                            <span data-i18n="de">Systemadministration</span>
+                            <span data-i18n="es">Administración de Sistemas</span>
+                        </button>
+                    </h2>
+                    <div id="collapseSysadmin" class="accordion-collapse collapse" aria-labelledby="headingSysadmin"
+                        data-bs-parent="#accordionWhatIDo">
+                        <div class="accordion-body">
+                            <ul>
+                                <li data-i18n="en">Linux &amp; Bash scripting</li>
+                                <li data-i18n="de">Linux &amp; Bash-Skripting</li>
+                                <li data-i18n="es">Linux y scripting en Bash</li>
+
+                                <li data-i18n="en">Docker containerization</li>
+                                <li data-i18n="de">Docker-Containerisierung</li>
+                                <li data-i18n="es">Contenerización con Docker</li>
+
+                                <li data-i18n="en">Jira &amp; Confluence administration</li>
+                                <li data-i18n="de">Jira- &amp; Confluence-Administration</li>
+                                <li data-i18n="es">Administración de Jira y Confluence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingWeb">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWeb" aria-expanded="false" aria-controls="collapseWeb">
+                            <span data-i18n="en">Web Development</span>
+                            <span data-i18n="de">Webentwicklung</span>
+                            <span data-i18n="es">Desarrollo Web</span>
+                        </button>
+                    </h2>
+                    <div id="collapseWeb" class="accordion-collapse collapse" aria-labelledby="headingWeb"
+                        data-bs-parent="#accordionWhatIDo">
+                        <div class="accordion-body">
+                            <ul>
+                                <li data-i18n="en">HTML, CSS, JavaScript, Bootstrap</li>
+                                <li data-i18n="de">HTML, CSS, JavaScript, Bootstrap</li>
+                                <li data-i18n="es">HTML, CSS, JavaScript, Bootstrap</li>
+
+                                <li data-i18n="en">Single Page Applications &amp; landing pages</li>
+                                <li data-i18n="de">Single-Page-Anwendungen &amp; Landingpages</li>
+                                <li data-i18n="es">Aplicaciones de una sola página y landing pages</li>
+
+                                <li data-i18n="en">Portfolio and business websites</li>
+                                <li data-i18n="de">Portfolio- und Unternehmenswebsites</li>
+                                <li data-i18n="es">Portafolios y sitios web empresariales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="reveal">
+            <h3 id="projects-title">
+                <span data-i18n="en">My Projects</span>
+                <span data-i18n="de">Meine Projekte</span>
+                <span data-i18n="es">Mis Proyectos</span>
+            </h3>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-card-image">
+                        <img alt="" src="assets/img/Projects-Images/lock.jpg">
+                    </div>
+                    <div class="project-card-body">
+                        <h4 class="project-card-title">
+                            <span data-i18n="en">DBA Password Rotation Tool</span>
+                            <span data-i18n="de">DBA-Passwort-Rotationstool</span>
+                            <span data-i18n="es">Herramienta de Rotación de Contraseñas para DBA</span>
+                        </h4>
+                        <p class="project-card-desc">
+                            <span data-i18n="en">A Java command-line tool for database administrators to
+                                securely rotate passwords for technical database users — the service accounts
+                                applications use to connect to a database. Supports bulk operations from a text file or
+                                direct CLI input, and keeps the database and HashiCorp Vault in sync per user.</span>
+                            <span data-i18n="de">Ein Java-Kommandozeilentool für Datenbankadministratoren zur
+                                sicheren Rotation von Passwörtern technischer Datenbankbenutzer — der Service-Accounts,
+                                mit denen sich Anwendungen mit einer Datenbank verbinden. Unterstützt Massenoperationen
+                                aus einer Textdatei oder direkte CLI-Eingabe und hält Datenbank und HashiCorp Vault pro
+                                Benutzer synchron.</span>
+                            <span data-i18n="es">Una herramienta de línea de comandos en Java para que los
+                                administradores de bases de datos roten de forma segura las contraseñas de usuarios
+                                técnicos — las cuentas de servicio que usan las aplicaciones para conectarse a una base
+                                de datos. Soporta operaciones masivas desde un archivo de texto o entrada directa por
+                                CLI, y mantiene sincronizados la base de datos y HashiCorp Vault por cada usuario.</span>
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">CLI</span>
+                            <span class="tag">Oracle</span>
+                            <span class="tag">HashiCorp Vault</span>
+                        </div>
+                        <a class="project-card-link" href="https://github.com/arconvictor/password-generator">
+                            <span data-i18n="en">View on GitHub →</span>
+                            <span data-i18n="de">Auf GitHub ansehen →</span>
+                            <span data-i18n="es">Ver en GitHub →</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card-image">
+                        <img alt="" src="assets/img/Projects-Images/database.jpg">
+                    </div>
+                    <div class="project-card-body">
+                        <h4 class="project-card-title">
+                            <span data-i18n="en">Spured — Auditable Data Versioning</span>
+                            <span data-i18n="de">Spured — Nachvollziehbare Datenversionierung</span>
+                            <span data-i18n="es">Spured — Versionado de Datos Auditable</span>
+                        </h4>
+                        <p class="project-card-desc">
+                            <span data-i18n="en">A Java / Quarkus service built for an insurance company to
+                                comply with regulations that prohibit deleting customer records. Instead of deletion, it
+                                versions and hides outdated data from day-to-day operators, while preserving a fully
+                                auditable history — who changed what, and when — accessible only to auditors and DBAs.</span>
+                            <span data-i18n="de">Ein Java-/Quarkus-Service für ein Versicherungsunternehmen zur
+                                Einhaltung von Vorschriften, die das Löschen von Kundendaten untersagen. Statt zu
+                                löschen, versioniert der Service veraltete Daten und blendet sie für den operativen
+                                Betrieb aus — bei vollständig nachvollziehbarer Historie, wer was wann geändert hat,
+                                einsehbar nur für Auditoren und Datenbankadministratoren.</span>
+                            <span data-i18n="es">Un servicio en Java/Quarkus construido para una aseguradora,
+                                para cumplir con regulaciones que prohíben eliminar registros de clientes. En vez de
+                                borrar, versiona y oculta los datos desactualizados de los operadores del día a día,
+                                preservando un historial completamente auditable — quién cambió qué y cuándo —
+                                accesible solo para auditores y DBAs.</span>
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Quarkus</span>
+                            <span class="tag">Hibernate ORM</span>
+                            <span class="tag">Oracle</span>
+                            <span class="tag">Liquibase</span>
+                        </div>
+                        <a class="project-card-link" href="https://github.com/arconvictor/spured">
+                            <span data-i18n="en">View on GitHub →</span>
+                            <span data-i18n="de">Auf GitHub ansehen →</span>
+                            <span data-i18n="es">Ver en GitHub →</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--wide">
+                    <div class="project-card-image">
+                        <img alt="" src="assets/img/Projects-Images/homelab-architecture.svg">
+                    </div>
+                    <div class="project-card-body">
+                        <h4 class="project-card-title">
+                            <span data-i18n="en">Two-Node Homelab Infrastructure</span>
+                            <span data-i18n="de">Zwei-Knoten-Homelab-Infrastruktur</span>
+                            <span data-i18n="es">Infraestructura de Homelab de Dos Nodos</span>
+                        </h4>
+                        <p class="project-card-desc">
+                            <span data-i18n="en">A self-hosted homelab I designed across two Proxmox VE
+                                nodes, built up piece by piece rather than all at once — the environment
+                                where I practice systems administration and DevOps work that doesn't show
+                                up in a typical junior dev's day-to-day, running ~30 LXC containers and VMs
+                                today. Highlights so far: a highly-available reverse proxy (Keepalived/VRRP,
+                                automatic failover), a firewall segmented per service with explicit
+                                default-deny rules, infrastructure automation with Ansible (dynamic
+                                inventory — still deepening my hands-on experience here), and an
+                                observability stack (Grafana, Loki, Prometheus) monitoring 40+ internal
+                                services.</span>
+                            <span data-i18n="de">Ein von mir entworfenes Homelab auf zwei Proxmox-VE-Knoten,
+                                Stück für Stück aufgebaut statt auf einen Schlag — die Umgebung, in der ich
+                                Systemadministration und DevOps-Arbeit übe, die im typischen
+                                Junior-Entwickleralltag nicht vorkommt, aktuell mit ~30 LXC-Containern und
+                                VMs. Bisherige Highlights: ein hochverfügbarer Reverse Proxy (Keepalived/VRRP,
+                                automatisches Failover), eine pro Dienst segmentierte Firewall mit expliziten
+                                Default-Deny-Regeln, Infrastrukturautomatisierung mit Ansible (dynamisches
+                                Inventar — hier vertiefe ich meine praktische Erfahrung noch), sowie ein
+                                Observability-Stack (Grafana, Loki, Prometheus), der über 40 interne Dienste
+                                überwacht.</span>
+                            <span data-i18n="es">Un homelab diseñado por mí en dos nodos Proxmox VE,
+                                construido de a poco en vez de todo de una vez — el entorno donde practico
+                                administración de sistemas y trabajo de DevOps que no aparece en el día a
+                                día típico de un desarrollador junior, hoy con ~30 contenedores LXC y VMs.
+                                Puntos destacados hasta ahora: un proxy reverso de alta disponibilidad
+                                (Keepalived/VRRP, failover automático), un firewall segmentado por servicio
+                                con reglas explícitas de denegación por defecto, automatización de
+                                infraestructura con Ansible (inventario dinámico — todavía profundizando mi
+                                experiencia práctica acá), y un stack de observabilidad (Grafana, Loki,
+                                Prometheus) que monitorea más de 40 servicios internos.</span>
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="tag">Proxmox VE</span>
+                            <span class="tag">Ansible</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Grafana</span>
+                        </div>
+                        <span class="project-card-link">
+                            <span data-i18n="en">Private infrastructure — architecture above</span>
+                            <span data-i18n="de">Private Infrastruktur — Architektur oben</span>
+                            <span data-i18n="es">Infraestructura privada — arquitectura arriba</span>
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skill" class="reveal">
+            <h3>
+                <span data-i18n="en">Skills</span>
+                <span data-i18n="de">Kenntnisse</span>
+                <span data-i18n="es">Habilidades</span>
+            </h3>
+            <div class="skills-grid">
+                <div class="skills-group">
+                    <h4>
+                        <span data-i18n="en">Languages &amp; Frameworks</span>
+                        <span data-i18n="de">Sprachen &amp; Frameworks</span>
+                        <span data-i18n="es">Lenguajes y Frameworks</span>
+                    </h4>
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Quarkus</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="skills-group">
+                    <h4>
+                        <span data-i18n="en">Infrastructure &amp; Tools</span>
+                        <span data-i18n="de">Infrastruktur &amp; Tools</span>
+                        <span data-i18n="es">Infraestructura y Herramientas</span>
+                    </h4>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">Git &amp; GitLab</span>
+                    <span class="tag">Jira &amp; Confluence</span>
+                </div>
+                <div class="skills-group">
+                    <h4>
+                        <span data-i18n="en">Databases</span>
+                        <span data-i18n="de">Datenbanken</span>
+                        <span data-i18n="es">Bases de Datos</span>
+                    </h4>
+                    <span class="tag">Oracle</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal">
+            <h3>
+                <span data-i18n="en">Let's talk</span>
+                <span data-i18n="de">Lass uns reden</span>
+                <span data-i18n="es">Hablemos</span>
+            </h3>
+            <p class="contact-lede">
+                <span data-i18n="en">Currently looking for Backend Development roles in Germany — with Systems
+                    Administration and Support as complementary strengths.</span>
+                <span data-i18n="de">Ich suche derzeit Stellen als Backend-Entwickler in Deutschland — mit
+                    Systemadministration und Support als ergänzenden Stärken.</span>
+                <span data-i18n="es">Actualmente busco puestos de Desarrollo Backend en Alemania — con
+                    Administración de Sistemas y Soporte como fortalezas complementarias.</span>
+            </p>
+            <div class="contact-methods">
+                <a class="contact-pill" href="mailto:me@victor-arcon.de">✉ me@victor-arcon.de</a>
+                <a class="contact-pill" href="tel:+4915251070744">☎ +49 152 51070744</a>
+                <span class="contact-pill">📍 Plauen, Sachsen</span>
+            </div>
+            <div class="hero-socials">
+                <a class="social-icon" href="https://www.linkedin.com/in/victor-manuel-arcon-perez-0b4314187/?locale=es_ES" aria-label="LinkedIn profile">
+                    <img alt="" src="assets/img/Profile-Images/linkedin.svg" width="26" height="26">
+                </a>
+                <a class="social-icon" href="https://github.com/arconvictor" aria-label="GitHub profile">
+                    <img alt="" src="assets/img/Profile-Images/github-brands-solid-full.svg" width="26" height="26">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>
+            <span data-i18n="en">&copy; 2025 Victor Arcon. All rights reserved. — Built by hand with HTML, CSS &amp; JS.</span>
+            <span data-i18n="de">&copy; 2025 Victor Arcon. Alle Rechte vorbehalten. — Von Hand gebaut mit HTML, CSS &amp; JS.</span>
+            <span data-i18n="es">&copy; 2025 Victor Arcon. Todos los derechos reservados. — Hecho a mano con HTML, CSS y JS.</span>
+        </small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.querySelectorAll('.menu li a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('.menu li').forEach(item => item.classList.remove('active'));
+                this.parentElement.classList.add('active');
+            });
+        });
+    </script>
+
+    <script src="assets/js/tech-band-duplicator.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/lang-toggle.js"></script>
+    <script src="assets/js/scroll-reveal.js"></script>
+</body>
+
+</html>
