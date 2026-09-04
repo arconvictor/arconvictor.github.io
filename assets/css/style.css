@@ -654,8 +654,19 @@ html.js .reveal.is-visible {
 .project-card-tags {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 0.4rem;
     margin-bottom: 1.1rem;
+}
+
+.tag-pair {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.tag-pair .skill-learning-badge {
+    margin-left: 0;
 }
 
 .tag {
@@ -673,13 +684,17 @@ html.js .reveal.is-visible {
     font-size: 0.62rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    padding: 0.05rem 0.4rem;
+    padding: 0.15rem 0.4rem;
     margin-left: 0.4rem;
     border-radius: 999px;
     border: 1px dashed var(--text-dim);
     color: var(--text-dim);
     background: transparent;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .project-card-link {
@@ -699,9 +714,14 @@ html.js .reveal.is-visible {
    ========================================================================== */
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1.5rem;
+}
+
+.skills-group {
+    flex: 0 1 auto;
 }
 
 .skills-group h4 {
@@ -713,9 +733,12 @@ html.js .reveal.is-visible {
     margin-bottom: 0.75rem;
 }
 
-.skills-group .tag {
-    margin: 0 0.4rem 0.4rem 0;
-    display: inline-block;
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
 }
 
 /* ==========================================================================
